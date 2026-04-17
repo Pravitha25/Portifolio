@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravitha V M | Front-End Developer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP / ThreeJS via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <div id="loader">
+    <div class="loader-content">
+        <h1 class="loader-text">Pravitha<span>VM</span></h1>
+        <div class="loader-bar">
+            <div class="loader-progress" id="loaderProgress"></div>
+        </div>
+    </div>
+</div>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- 3D Canvas Container -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <a href="#home" class="logo">Pravitha<span>VM</span></a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="view-section hero">
+            <div class="hero-content ui-layer">
+                <h2 class="greeting">Hello, I'm</h2>
+                <h1 class="name glitched" data-text="Pravitha V M">Pravitha V M</h1>
+                <h3 class="title">UI/UX Developer</h3>
+                <p class="description">
+                    Building responsive, user-friendly interfaces with a passion for creative and clean UI.<br>
+                    Crafting immersive digital experiences.
+                </p>
+                <div class="cta-group">
+                    <a href="#work" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="view-section about">
+            <div class="ui-layer section-container">
+                <h2 class="section-title">About <span>Me</span></h2>
+                <div class="about-grid">
+                    <div class="about-card glass">
+                        <p class="about-text">
+                            Results-driven UI/UX Developer with 2+ years of experience building responsive, user-friendly interfaces using modern web technologies. Skilled in delivering high-quality software through Agile methodologies with a strong focus on customer experience, ownership, and performance optimization.
+                        </p>
+                        <ul class="highlights">
+                            <li><span class="neon-text">10+</span> Responsive Websites Deployed</li>
+                            <li><span class="neon-text">30%</span> Improved Development Efficiency</li>
+                            <li><span class="neon-text">99%</span> Uptime Maintenance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item glass">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>UI/UX Developer</h3>
+                                <h4>Green Integrated Information Technology LLC</h4>
+                                <span class="date">Aug 2023 – Present</span>
+                                <p>Developed SPAs with dynamic routing, built reusable UI components, and improved page load times by 25% using React.js.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item glass">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Python Full Stack Developer</h3>
+                                <h4>Zonemac IT Solutions</h4>
+                                <span class="date">Oct 2022 – Apr 2023</span>
+                                <p>Applied engineering practices for full SDLC. Maintained documentation and followed best practices for UI development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="view-section skills">
+            <div class="ui-layer section-container">
+                <h2 class="section-title">Core <span>Skills</span></h2>
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category glass">
+                        <h3>Languages & Core</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                    <!-- Frameworks -->
+                    <div class="skill-category glass">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <!-- Tools & Backend -->
+                    <div class="skill-category glass">
+                        <h3>Tools & Architecture</h3>
+                        <div class="skill-tags">
+                            <!-- <span class="skill-tag">Webpack</span> -->
+                            <span class="skill-tag">Git/GitHub</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3D simulated skill progress -->
+                <div class="skill-bars">
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Front-End Dev</span><span>90%</span></div>
+                        <div class="skill-bar-bg glass"><div class="skill-bar-fill neon-bg" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>React.js</span><span>85%</span></div>
+                        <div class="skill-bar-bg glass"><div class="skill-bar-fill neon-bg" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>UI/UX Design</span><span>80%</span></div>
+                        <div class="skill-bar-bg glass"><div class="skill-bar-fill neon-bg" data-width="80%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section class="projects" id="work">
+    <h2 class="section-title">My <span>Work</span></h2>
+
+    <div class="slider-container">
+        <div class="slider" id="projectSlider"></div>
+
+        <div class="slider-controls">
+            <button id="prevBtn">⟵</button>
+            <button id="nextBtn">⟶</button>
+        </div>
+    </div>
+</section>
+        <!-- Projects Section -->
+        <section id="projects" class="view-section projects">
+            <div class="ui-layer section-container">
+                <h2 class="section-title">My <span>Projects</span></h2>
+                <div class="project-cards">
+                    <!-- Project 1 -->
+                    <div class="project-card glass tilt-card">
+                        <div class="project-content">
+                            <h3>AirScript - Document Creation</h3>
+                            <div class="project-tech">
+                                <span>Python</span><span>OpenCV</span>
+                            </div>
+                            <p>An interactive application for real-time document creation achieving 85%+ gesture recognition accuracy. Implemented hand tracking to improve input efficiency without touch.</p>
+                            <!-- <a href="#" class="project-link">View Project <span>&rarr;</span></a> -->
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card glass tilt-card">
+                        <div class="project-content">
+                            <h3>CapiClean - Cleaning Service</h3>
+                            <div class="project-tech">
+                                <span>Django</span><span>PostgreSQL</span><span>HTML/CSS</span>
+                            </div>
+                            <p>A full-stack web application with core features including booking, service management, and user authentication, reducing query response time and improving layout consistency.</p>
+                            <!-- <a href="#" class="project-link">View Project <span>&rarr;</span></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="view-section contact">
+            <div class="ui-layer section-container">
+                <h2 class="section-title">Get In <span>Touch</span></h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info glass">
+                        <h3>Connect with me</h3>
+                        <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="icon">✉</i>
+                                <span>pravithaprasad474@gmail.com</span>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="icon">in</i>
+                                <span>https://www.linkedin.com/in/pravitha-v-m-947900236/</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form glass">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required placeholder="Name">
+                            <label for="name">Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" required placeholder="Email">
+                            <label for="email">Email</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" name="message" required placeholder="Message" rows="4"></textarea>
+                            <label for="message">Message</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer ui-layer">
+            <p>&copy; 2026 Pravitha V M.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
